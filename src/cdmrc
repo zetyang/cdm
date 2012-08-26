@@ -7,30 +7,30 @@
 # If unset, all sessions in /etc/X11/Sessions are offered as choices.
 #
 # (An example:)
-# binlist=(
-#   "~/.xsession"                    # Launch your X session,
-#   "/bin/bash --login"              # or just execute your shell,
-#   "/usr/bin/fbterm"                # or start a frame buffer console,
-#   "/usr/bin/cdm ~/.submenu.cdmrc"  # or go to a submenu :)
-# )
+binlist=(
+   "/usr/bin/awesome"
+   "/bin/bash --login"              # or just execute your shell,
+   "/usr/bin/fbterm"                # or start a frame buffer console,
+   "/usr/bin/cdm ~/.submenu.cdmrc"  # or go to a submenu :)
+)
 
 # List all program display names, one-by-one matched with $binlist.
 # Names with whitespaces should be quoted or escaped.
 #
 # (Continued example:)
-# namelist=("X session" Console FBTerm "Sub menu")
+namelist=("awesome" Console FBTerm "Sub menu")
 
 # Type of the programs, one-by-one matched with $binlist.
 # `C' for *C*onsole programs, which would be `exec'ed.
 # `X' for *X* programs, which would be run with cdm-xlaunch(1).
 #
 # (Continued example:)
-# flaglist=(X C C C)
+flaglist=(X C C C)
 
 # Style for the cdm dialog, which is printed with dialog(1).
 # Default to unset, causing dialog(1) to use the system wide default.
 # See /usr/share/doc/cdm/themes for some nice choices.
-dialogrc=
+dialogrc='haze'
 
 # Index of the first item in the menu.
 countfrom=0
@@ -42,15 +42,15 @@ display=0
 xtty=7
 
 # Should cdm(1) stick to the specified display?
-locktty=no
+locktty='no'
 
 # Additional arguments to pass to X server, which is usually called as:
 #   /usr/bin/X :$display $serverargs vt$((xtty+display))
 serverargs='-nolisten tcp'
 
-# Use ConsoleKit for X session?
-consolekit=yes
+# Use consolekit for X session?
+consolekit='no'
 
-# Timeout for waiting for X session to register with ConsoleKit.
+# Timeout for waiting for X session to register with consolekit.
 cktimeout=30
 
