@@ -18,7 +18,7 @@ binlist=(
 # Names with whitespaces should be quoted or escaped.
 #
 # (Continued example:)
-namelist=("awesome" Console FBTerm "Sub menu")
+namelist=("Awesome" Console FBTerm "Sub menu")
 
 # Type of the programs, one-by-one matched with $binlist.
 # `C' for *C*onsole programs, which would be `exec'ed.
@@ -30,7 +30,7 @@ flaglist=(X C C C)
 # Style for the cdm dialog, which is printed with dialog(1).
 # Default to unset, causing dialog(1) to use the system wide default.
 # See /usr/share/doc/cdm/themes for some nice choices.
-dialogrc='haze'
+dialogrc=/usr/share/doc/cdm/themes/cdm
 
 # Index of the first item in the menu.
 countfrom=0
